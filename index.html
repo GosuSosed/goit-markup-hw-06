@@ -42,7 +42,25 @@
     <main>
         <section class="hero">
             <h1 class="hero-title">Эффективные решения для вашего бизнеса</h1>
-            <button class="button-main-top">Заказать услугу</button>
+            <button class="button-main-top" data-modal-open>Заказать услугу</button>
+            <div class="backdrop is-hidden" data-modal>
+              <div class="modal">
+                <form action="#">
+                  <button data-modal-close>Закрыть</button>
+                   <b class="modal-title">Оставьте свои данные, мы вам перезвоним</b>
+                   <label>Имя</label>
+                   <input type="text">
+                   <label>Телефон</label>
+                   <input type="tel">
+                   <label>Почта</label>
+                   <input type="email">
+                   <label>Комментарий</label>
+                   <input type="text">
+                   <button type="checkbox">Соглашаюсь с рассылкой и принимаю <a>Условия договора</a></button>
+                   <button type="submit">Отправить</button>
+                </form>
+              </div>
+            </div>
         </section>
         <!-- особенности -->
         <section class="section">
@@ -266,5 +284,6 @@
        </div>
       </div>
     </footer>
+    <script src="./js/modal.js"></script>
 </body>
 </html>
