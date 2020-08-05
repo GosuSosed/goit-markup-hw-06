@@ -650,3 +650,14 @@ margin-right: 10px;
     text-align: center;
     margin-bottom: 30px;
 }
+.forma {
+    padding-left: 40px;
+    padding-right: 40px;
+}
+.forma-item {
+ display: block;
+ width: 100%;
+}
+.forma-item:not(:last-child) {
+    margin-bottom: 30px;
+}

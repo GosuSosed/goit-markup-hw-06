@@ -45,18 +45,19 @@
             <button class="button-main-top" data-modal-open>Заказать услугу</button>
             <div class="backdrop is-hidden" data-modal>
               <div class="modal">
-                <form action="#">
+                <form class="forma" action="#">
                   <button data-modal-close>Закрыть</button>
                    <b class="modal-title">Оставьте свои данные, мы вам перезвоним</b>
-                   <label>Имя</label>
-                   <input type="text">
-                   <label>Телефон</label>
-                   <input type="tel">
-                   <label>Почта</label>
-                   <input type="email">
-                   <label>Комментарий</label>
-                   <input type="text">
-                   <button type="checkbox">Соглашаюсь с рассылкой и принимаю <a>Условия договора</a></button>
+                   <label for="name">Имя</label>
+                   <input class="forma-item" type="text" name="name" id="name">
+                   <label for="tel">Телефон</label>
+                   <input class="forma-item" type="tel" name="tel" id="tel">
+                   <label for="mail">Почта</label>
+                   <input class="forma-item" type="email" name="mail" id="mail" autocomplete="on">
+                   <label for="coment">Комментарий</label>
+                   <input class="forma-item" type="text" name="coment" id="coment">
+                   <input class="forma-item" type="checkbox" name="agree" value="agree" id="agree">
+                   <label>Соглашаюсь с рассылкой и принимаю <a href="">Условия договора</a></label>
                    <button type="submit">Отправить</button>
                 </form>
               </div>
@@ -275,7 +276,7 @@
        <div>
         <b class="action">Подпишитесь на рассылку</b>
         <form class="follow">
-            <input class="enter" type="email" autocomplete="off" id="email-input" name="email" placeholder="E-mail" lang="en">
+            <input class="enter" type="email" autocomplete="on" id="email-input" name="email" placeholder="E-mail" lang="en">
             <button class="button-main-bot" type="submit">
               Подписаться
               <svg class="envelope"><use href="./images/sprite.svg#icon-send"></use></svg>
