@@ -45,20 +45,33 @@
             <button class="button-main-top" data-modal-open>Заказать услугу</button>
             <div class="backdrop is-hidden" data-modal>
               <div class="modal">
-                <form class="forma" action="#">
-                  <button data-modal-close>Закрыть</button>
-                   <b class="modal-title">Оставьте свои данные, мы вам перезвоним</b>
-                   <label for="name">Имя</label>
-                   <input class="forma-item" type="text" name="name" id="name">
-                   <label for="tel">Телефон</label>
-                   <input class="forma-item" type="tel" name="tel" id="tel">
-                   <label for="mail">Почта</label>
-                   <input class="forma-item" type="email" name="mail" id="mail" autocomplete="on">
-                   <label for="coment">Комментарий</label>
-                   <input class="forma-item" type="text" name="coment" id="coment">
-                   <input class="forma-item" type="checkbox" name="agree" value="agree" id="agree">
-                   <label>Соглашаюсь с рассылкой и принимаю <a href="">Условия договора</a></label>
-                   <button type="submit">Отправить</button>
+                  <button type="submit" class="forma-close" data-modal-close><svg class="forma-close-icon" width="18" height="18"><use href="./images/sprite.svg#icon-close"></use></svg></button>
+                  <form class="forma" action="#">  
+                  <b class="modal-title">Оставьте свои данные, мы вам перезвоним</b>
+                  <label class="forma-field">
+                    <span class="forma-name">Имя</span>
+                    <input class="forma-input" type="text" name="name" autocomplete="off" placeholder=" ">
+                    <svg class="forma-icon" width="18" height="18"><use href="./images/sprite.svg#icon-person"></use></svg>
+                  </label>
+                  <label class="forma-field">
+                    <span class="forma-name">Телефон</span>
+                    <input class="forma-input" type="tel" name="tel" autocomplete="off" placeholder=" ">
+                    <svg class="forma-icon" width="18" height="18"><use href="./images/sprite.svg#icon-phone"></use></svg>
+                  </label>
+                  <label class="forma-field">
+                    <span class="forma-name">Почта</span>
+                    <input class="forma-input" type="email" name="email" autocomplete="off" placeholder=" ">
+                    <svg class="forma-icon" width="18" height="18"><use href="./images/sprite.svg#icon-email"></use></svg>
+                  </label>
+                  <label class="forma-field">
+                    <span class="forma-name">Комментарий</span>
+                    <textarea class="forma-input textarea-input" type="text" name="coment" autocomplete="off" placeholder="Введите текст"></textarea>
+                  </label>
+                  <label class="forma-field">
+                    <input type="checkbox" name="checkbox" autocomplete="off" placeholder=" ">
+                    <span class="text-dogovor">Соглашаюсь с рассылкой и принимаю <a class="dogovor">Условия договора</a></span>
+                  </label>
+                  <button type="submit" class="send-btn" data-modal>Отправить</button>
                 </form>
               </div>
             </div>
@@ -115,8 +128,8 @@
           <h2 class="title">Наша команда</h2>
           <ul class="team-list">
             <li class="team-list-person">
-              <img class="team-img" src="./images/team/kucherenko.jpg" alt="кучеренко" width="270" height="260">
-              <h3 class="team-name">Николай Кучеренко</h3>
+              <img class="team-img" src="./images/team/demyanenko.jpg" alt="кучеренко" width="270" height="260">
+              <h3 class="team-name">Игорь Демьяненко</h3>
               <p lang="en" class="team-position">Product Designer</p>
                 <ul class="team-social-list">
                     <li class="team-social-list-item">
@@ -138,8 +151,8 @@
                 </ul>
             </li>
             <li class="team-list-person">
-                <img class="team-img" src="./images/team/ivanova.jpg" alt="иванова" width="270" height="260">
-                <h3 class="team-name">Ольга Иванова</h3>
+                <img class="team-img" src="./images/team/repina.jpg" alt="иванова" width="270" height="260">
+                <h3 class="team-name">Ольга Репина</h3>
                 <p lang="en" class="team-position">Frontend Developer</p>
                 <ul class="team-social-list">
                   <li class="team-social-list-item">
@@ -161,8 +174,8 @@
               </ul> 
             </li>
             <li class="team-list-person">
-                <img class="team-img" src="./images/team/shevchenko.jpg" alt="шевченко" width="270" height="260">
-                <h3 class="team-name">Андрей Шевченко</h3>
+                <img class="team-img" src="./images/team/tarasov.jpg" alt="шевченко" width="270" height="260">
+                <h3 class="team-name">Николай Тарасов</h3>
                 <p lang="en" class="team-position">Marketing</p>
                 <ul class="team-social-list">
                   <li class="team-social-list-item">
@@ -184,8 +197,8 @@
               </ul>    
             </li>
             <li class="team-list-person">
-                <img class="team-img" src="./images/team/nikolaev.jpg" alt="николаев" width="270" height="260">
-                <h3 class="team-name">Иван Николаев</h3>
+                <img class="team-img" src="./images/team/ermakov.jpg" alt="николаев" width="270" height="260">
+                <h3 class="team-name">Михаил Ермаков</h3>
                 <p lang="en" class="team-position">UI Designer</p>
                 <ul class="team-social-list">
                   <li class="team-social-list-item">
@@ -276,8 +289,10 @@
        <div>
         <b class="action">Подпишитесь на рассылку</b>
         <form class="follow">
-            <input class="enter" type="email" autocomplete="on" id="email-input" name="email" placeholder="E-mail" lang="en">
-            <button class="button-main-bot" type="submit">
+          <Label>  
+            <input class="enter" type="email" autocomplete="on" name="email" placeholder="E-mail" lang="en">
+          </Label>  
+          <button class="button-main-bot" type="submit">
               Подписаться
               <svg class="envelope"><use href="./images/sprite.svg#icon-send"></use></svg>
             </button>
