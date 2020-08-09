@@ -682,6 +682,7 @@ margin-right: 10px;
     justify-content: center;
     align-items: center;
     cursor: pointer;
+    transform: translateX(-5%);
 }
 .forma-close:hover .forma-close-icon,
 .forma-close:focus .forma-close-icon {
